@@ -13,14 +13,14 @@
 }
 
 body {
-    background-color: #f9f9f9;
+    background-color: #e0ecea;
     color: #333;
     line-height: 1.6;
 }
 
 /* Header */
 .site-header {
-    background-color: #ffffff;
+    background-color: #e0ecea;
     display: flex;
     justify-content: space-between;
     align-items: center;
