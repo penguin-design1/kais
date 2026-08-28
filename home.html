@@ -4,50 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kai's Grill House - Home</title>
+    <link rel="icon" type="image/png" href="kaihead.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header class="site-header">
-        <div class="header-left-spacer"></div>
-        <div class="header-center-logo">
-            <a href="home.html">
-                <img src="kailogo.png" alt="Kai's Grill House Logo" class="logo">
-            </a>
-        </div>
-        <div class="header-right">
-            <a href="tel:+27511010800" class="phone-number">+27 51 101 0800</a>
-        </div>
-    </header>
+    <!-- Sticky Header & Nav Wrapper -->
+    <div class="sticky-header-wrapper">
+        <header class="site-header">
+            <div class="header-left-spacer"></div>
+            <div class="header-center-logo">
+                <a href="home.html">
+                    <img src="kailogo.png" alt="Kai's Grill House Logo" class="logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <a href="tel:+27511010800" class="phone-number">+27 51 101 0800</a>
+            </div>
+        </header>
 
-    <!-- Navigation -->
-    <nav class="nav-links-container">
-        <ul class="nav-links">
-            <li><a href="home.html" class="active">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-        </ul>
-    </nav>
+        <nav class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- Main Content -->
     <main class="home-content">
         
-        <!-- Section 1: Hero split matching Image 1 -->
+        <!-- Section 1 -->
         <section class="info-row">
             <div class="info-text">
                 <div class="section-tagline">Kai's Grillhouse</div>
                 <h2>A proper night out, over fire.</h2>
                 <p>The table is set for honest cuts, cold drinks, and the kind of evenings that run a little longer than planned.</p>
-                <a href="menu.html" class="btn-primary">Book A Table</a>
+                <a href="tel:+27511010800" class="btn-primary">Book A Table</a>
             </div>
             <div class="info-image">
                 <img src="https://kais.co.za/wp-content/uploads/2026/02/Best-pizza-in-Bloemfontein.png" alt="People enjoying food and drinks">
             </div>
         </section>
 
-        <!-- Section 2: Split matching Image 2 -->
+        <!-- Section 2 -->
         <section class="info-row reverse">
             <div class="info-text">
                 <div class="section-tagline">The Kai's Way</div>
@@ -60,7 +62,7 @@
             </div>
         </section>
 
-        <!-- Section 3: Find Us & Trading Hours matching Image 3 (with Google Map embedded) -->
+        <!-- Section 3: Find Us -->
         <section class="find-us-container">
             <div class="find-us-header">
                 <div class="section-tagline">Find Us</div>
@@ -68,7 +70,6 @@
             </div>
             
             <div class="cards-grid">
-                <!-- Location Card with Google Map -->
                 <div class="dark-card">
                     <div>
                         <div class="section-tagline">Location</div>
@@ -92,7 +93,6 @@
                     </div>
                 </div>
 
-                <!-- Trading Hours Card -->
                 <div class="dark-card">
                     <div>
                         <div class="section-tagline">Trading Hours</div>
@@ -114,12 +114,8 @@
         <img src="kaihead.png" alt="Kai Head Footer Logo" class="footer-logo">
         <p>Give us a like, share and follow!</p>
         <div class="social-bubbles">
-            <a href="https://www.facebook.com/kaisgrillhouse/" target="_blank" class="social-bubble facebook" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/kaisgrillhouse/" target="_blank" class="social-bubble instagram" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
+            <a href="https://www.facebook.com/kaisgrillhouse/" target="_blank" class="social-bubble facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/kaisgrillhouse/" target="_blank" class="social-bubble instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
 
