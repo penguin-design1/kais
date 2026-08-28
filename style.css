@@ -16,6 +16,19 @@ body {
     line-height: 1.6;
 }
 
+/* Staggered Scroll Reveal Animation Classes */
+.reveal-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition-delay: calc(var(--order, 0) * 0.15s);
+}
+
+.reveal-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Header (Logo & Phone) */
 .site-header {
     background-color: #161616;
@@ -90,7 +103,7 @@ body {
     overflow-x: auto;
     white-space: nowrap;
     position: sticky;
-    top: 50px; /* Sits right beneath the main sticky nav */
+    top: 50px;
     z-index: 999;
 }
 
@@ -207,6 +220,12 @@ body {
     font-weight: bold;
     font-size: 13px;
     margin-top: 15px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.directions-btn:hover {
+    background-color: #e5c72f;
+    transform: translateY(-2px);
 }
 
 /* Footer */
@@ -242,6 +261,11 @@ body {
     color: #fff;
     font-size: 18px;
     text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.social-bubble:hover {
+    transform: scale(1.1);
 }
 
 .social-bubble.facebook { background-color: #1877f2; }
