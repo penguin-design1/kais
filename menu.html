@@ -5,42 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Kai's Grill House</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- Header Section -->
     <header class="site-header">
         <div class="header-left">
             <img src="kailogo.png" alt="Kai's Grill House Logo" class="logo">
-            <div class="header-titles">
-                <h1>Kai's Grill House</h1>
-                <p class="tagline">Where Friends Meat</p>
-            </div>
+        </div>
+        <div class="header-center">
+            <h1>Kai's Grill House</h1>
+            <p class="tagline">Where Friends Meat</p>
         </div>
         <div class="header-right">
             <a href="tel:+27511010800" class="phone-number">+27 51 101 0800</a>
         </div>
     </header>
 
-    <nav class="nav-tabs">
-        <ul>
-            <li><a href="index.html">Home</a></li>
+    <!-- Navigation Links -->
+    <nav class="nav-links-container">
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
             <li><a href="menu.html" class="active">Menu</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
         </ul>
     </nav>
 
+    <!-- Main Menu Content -->
     <main class="home-content">
         <section class="hours-section">
             <h2>Our Menu</h2>
             <p>Explore our delicious selection of flame-grilled items, steaks, and sides.</p>
-            </section>
+        </section>
     </main>
 
+    <!-- Footer Section -->
     <footer class="site-footer">
         <img src="kaihead.png" alt="Kai Head Footer Logo" class="footer-logo">
         <p>Give us a like, share and follow!</p>
-        <div class="social-links">
-            <a href="https://www.facebook.com/kaisgrillhouse/" target="_blank">Facebook</a>
-            <a href="https://www.instagram.com/kaisgrillhouse/" target="_blank">Instagram</a>
+        <div class="social-bubbles">
+            <a href="https://www.facebook.com/kaisgrillhouse/" target="_blank" class="social-bubble facebook" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/kaisgrillhouse/" target="_blank" class="social-bubble instagram" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
         </div>
     </footer>
 
