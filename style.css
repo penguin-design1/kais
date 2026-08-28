@@ -50,9 +50,9 @@ body {
     color: #fddb3b;
     font-size: 38px;
     letter-spacing: 1px;
-    /* Black text outline */
-    -webkit-text-stroke: 1px #000000;
-    text-shadow: 2px 2px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
+    /* White text outline */
+    -webkit-text-stroke: 1px #ffffff;
+    text-shadow: 2px 2px 0px #fff, -1px -1px 0px #fff, 1px -1px 0px #fff, -1px 1px 0px #fff;
 }
 
 .header-center .tagline {
@@ -60,13 +60,13 @@ body {
     font-size: 15px;
     font-weight: bold;
     margin-top: 2px;
-    -webkit-text-stroke: 0.4px #000000;
+    -webkit-text-stroke: 0.4px #ffffff;
 }
 
 .header-right .phone-number {
     font-size: 18px;
     font-weight: bold;
-    color: #fddb3b; /* Changed to yellow */
+    color: #fddb3b;
     text-decoration: none;
 }
 
