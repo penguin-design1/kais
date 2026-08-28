@@ -1,0 +1,239 @@
+/* General Reset & Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 2px solid #eaeaea;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+}
+
+.header-titles h1 {
+    color: #fddb3b;
+    font-size: 28px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.header-titles .tagline {
+    color: #fddb3b;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.header-right .phone-number {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.header-right .phone-number:hover {
+    color: #fddb3b;
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+    background-color: #222;
+}
+
+.nav-tabs ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-tabs li a {
+    display: block;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.nav-tabs li a:hover, 
+.nav-tabs li a.active {
+    background-color: #fddb3b;
+    color: #000;
+}
+
+/* Main Home Content */
+.home-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Info Rows (Split Layouts) */
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.info-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.info-image, .info-text {
+    flex: 1;
+}
+
+.info-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.info-text h2 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+/* Opening Hours Section */
+.hours-section {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.hours-section h2 {
+    margin-bottom: 20px;
+}
+
+.hours-list {
+    list-style: none;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.hours-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+}
+
+/* Location Section */
+.location-section {
+    display: flex;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.location-info {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.location-info h2 {
+    margin-bottom: 10px;
+}
+
+.location-info .coords {
+    font-size: 13px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.location-map {
+    flex: 1;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer-logo {
+    height: 50px;
+    width: auto;
+    margin-bottom: 15px;
+}
+
+.site-footer p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #fddb3b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design adjustments for mobile screens */
+@media (max-width: 768px) {
+    .site-header, .info-row, .info-row.reverse, .location-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-left {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-right {
+        margin-top: 15px;
+    }
+
+    .info-row {
+        gap: 20px;
+        padding: 20px;
+    }
+}
