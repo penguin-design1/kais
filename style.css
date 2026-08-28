@@ -169,29 +169,54 @@ body {
 .hero-img {
     width: 50%;
     height: 300px;
-    object-fit: cover;
     border-radius: 8px;
 }
 
-/* Slideshow Crossfade Styling */
+/* Slideshow Background Blur Effect Styling */
 .hero-slideshow {
     position: relative;
+    background-color: #000;
 }
 
-.hero-slideshow .slide {
+.hero-slideshow .slide-wrapper {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 8px;
 }
 
-.hero-slideshow .slide.active {
+.hero-slideshow .slide-wrapper.active {
     opacity: 1;
+}
+
+/* The blurred backdrop filling the empty spaces */
+.slide-blur-bg {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background-size: cover;
+    background-position: center;
+    filter: blur(15px) brightness(0.5);
+    z-index: 1;
+}
+
+/* The main sharp image centered without cropping */
+.slide-img {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 .hero-text {
