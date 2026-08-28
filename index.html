@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kai's Grill House</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <header class="site-header">
         <div class="header-left">
             <img src="kailogo.png" alt="Kai's Grill House Logo" class="logo">
-            <div class="header-titles">
-                <h1>Kai's Grill House</h1>
-                <p class="tagline">Where Friends Meat</p>
-            </div>
+        </div>
+        <div class="header-center">
+            <h1>Kai's Grill House</h1>
+            <p class="tagline">Where Friends Meat</p>
         </div>
         <div class="header-right">
             <a href="tel:+27511010800" class="phone-number">+27 51 101 0800</a>
         </div>
     </header>
 
-    <nav class="nav-tabs">
-        <ul>
+    <nav class="nav-links-container">
+        <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="menu.html">Menu</a></li>
         </ul>
@@ -64,7 +65,6 @@
             <div class="location-info">
                 <h2>Kai's Grill House</h2>
                 <p>X63G+7P, Bloemfontein, South Africa</p>
-                <p class="coords">Coordinates: -29.046897, 26.226620</p>
             </div>
             <div class="location-map">
                 <iframe 
@@ -83,9 +83,13 @@
     <footer class="site-footer">
         <img src="kaihead.png" alt="Kai Head Footer Logo" class="footer-logo">
         <p>Give us a like, share and follow!</p>
-        <div class="social-links">
-            <a href="https://www.facebook.com/kaisgrillhouse/" target="_blank">Facebook</a>
-            <a href="https://www.instagram.com/kaisgrillhouse/" target="_blank">Instagram</a>
+        <div class="social-bubbles">
+            <a href="https://www.facebook.com/kaisgrillhouse/" target="_blank" class="social-bubble facebook" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/kaisgrillhouse/" target="_blank" class="social-bubble instagram" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
         </div>
     </footer>
 
