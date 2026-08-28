@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kai's Grill House</title>
+    <title>Home - Kai's Grill House</title>
     <link rel="icon" type="image/png" href="kaihead.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -37,38 +37,51 @@
     <!-- Main Content -->
     <main class="home-content">
         
-        <!-- Welcome Card -->
-        <div class="dark-card" style="text-align: center;">
-            <div class="section-tagline">Welcome To</div>
-            <h1 style="font-family: serif; font-size: 42px; color: #fff; margin-bottom: 15px;">Kai's Grill House</h1>
-            <p style="color: #aaa; max-width: 800px; margin: 0 auto;">Experience premium cuts, flame-grilled perfection, wood-fired artisanal pizzas, and an inviting atmosphere right in the heart of town.</p>
-        </div>
-
-        <!-- Photo Gallery Section -->
-        <div class="dark-card">
-            <div class="section-tagline">Gallery</div>
-            <h2 style="font-family: serif; color: #fff; margin-bottom: 15px;">A Glimpse Inside</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="gallery1.jpg" alt="Grill dish"></div>
-                <div class="gallery-item"><img src="gallery2.jpg" alt="Restaurant interior"></div>
-                <div class="gallery-item"><img src="gallery3.jpg" alt="Wood fired pizza"></div>
-                <div class="gallery-item"><img src="gallery4.jpg" alt="Drinks and cocktails"></div>
+        <!-- Hero Section matching screenshot -->
+        <div class="dark-card hero-section">
+            <div class="hero-image-container">
+                <img src="storefront.jpg" alt="Kai's Grill House Storefront" class="hero-img">
+            </div>
+            <div class="hero-text-content">
+                <div class="section-tagline">THE KAI'S WAY</div>
+                <h1 class="hero-title">Smoke, steak, and good company.</h1>
+                <p class="hero-desc">From the first pour to the last bite, Kai's is built for relaxed lunches, big celebrations, and everything in between.</p>
+                <div class="hero-badge">
+                    <i class="fa-solid fa-fire"></i> <span>FLAME-GRILLED. FULL OF CHARACTER.</span>
+                </div>
             </div>
         </div>
 
-        <!-- Info Grid (Hours, Address, & Google Map) -->
-        <div class="info-grid">
-            <div class="dark-card" style="margin-bottom: 0;">
-                <div class="section-tagline">Visit Us</div>
-                <h3 style="color: #fff; margin-bottom: 15px; font-family: serif;">Location & Hours</h3>
-                <p style="color: #ccc; margin-bottom: 10px;"><strong>Address:</strong><br>Shop 4, Preller Square, Dan Pienaar, Bloemfontein, South Africa</p>
-                <p style="color: #ccc; margin-bottom: 15px;"><strong>Opening Hours:</strong><br>Monday – Sunday: 11:00 AM – 10:00 PM</p>
-                <a href="https://maps.google.com" target="_blank" style="color: #fddb3b; font-weight: bold; text-decoration: none;"><i class="fas fa-map-marker-alt"></i> Open in Google Maps</a>
-            </div>
+        <!-- Find Us & Trading Hours section matching screenshot -->
+        <div style="margin-top: 40px;">
+            <div class="section-tagline" style="margin-bottom: 5px;">FIND US</div>
+            <h2 style="font-family: serif; font-size: 38px; color: #fff; margin-bottom: 25px;">Come hungry. Stay awhile.</h2>
+            
+            <div class="info-grid">
+                <!-- Location Card -->
+                <div class="dark-card" style="margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div class="section-tagline">LOCATION</div>
+                        <h3 style="color: #fff; font-size: 26px; font-family: serif; margin-bottom: 20px; line-height: 1.3;">
+                            Find Kai’s Grillhouse in the heart of town — your table is waiting.
+                        </h3>
+                    </div>
+                    <div>
+                        <div style="color: #fddb3b; font-size: 24px; margin-bottom: 15px;"><i class="fab fa-google"></i></div>
+                        <a href="https://maps.google.com" target="_blank" class="directions-btn">GET DIRECTIONS</a>
+                    </div>
+                </div>
 
-            <div class="dark-card map-container" style="margin-bottom: 0; padding: 20px;">
-                <!-- Embedded Google Map -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3484.35!2d26.2044!3d-29.1182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDA3JzA1LjUiUyAyNsKwMTInMTUuOCJF!5e0!3m2!1sen!2sza!4v1620000000000!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe>
+                <!-- Trading Hours Card -->
+                <div class="dark-card" style="margin-bottom: 0;">
+                    <div class="section-tagline">TRADING HOURS</div>
+                    <ul class="hours-list">
+                        <li><span>Monday</span> <span>— Closed</span></li>
+                        <li><span>Tuesday–Thursday</span> <span>— 11:00 am–00:00 am</span></li>
+                        <li><span>Friday–Saturday</span> <span>— 11:00 am–01:00 am</span></li>
+                        <li><span>Sunday</span> <span>— 11:00 am–14:00 pm</span></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
