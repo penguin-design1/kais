@@ -19,7 +19,7 @@
             </a>
         </div>
         <div class="header-right">
-            <a href="tel:+27511010800" class="phone-number"></a>
+            <a href="tel:+27511010800" class="phone-number">+27 51 101 0800</a>
         </div>
     </header>
 
@@ -35,7 +35,7 @@
     <!-- Main Content -->
     <main class="home-content">
         
-        <!-- Top Section -->
+        <!-- Top Section with Slideshow -->
         <div class="hero-grid">
             <div class="hero-text">
                 <div class="section-tagline reveal-item" style="--order: 1;">KAI'S GRILLHOUSE</div>
@@ -43,7 +43,14 @@
                 <p class="reveal-item" style="--order: 3; color: #bbb; font-size: 15px; margin-bottom: 20px;">The table is set for honest cuts, cold drinks, and the kind of evenings that run a little longer than planned.</p>
                 <a href="tel:+27511010800" class="directions-btn reveal-item" style="--order: 4; display: inline-block;">BOOK A TABLE</a>
             </div>
-            <img src="https://kais.co.za/wp-content/uploads/2026/02/Best-pizza-in-Bloemfontein.png" alt="Best pizza in Bloemfontein at Kai's Grill House" class="hero-img reveal-item" style="--order: 5;">
+            
+            <!-- Slideshow Container -->
+            <div class="hero-slideshow hero-img reveal-item" style="--order: 5; position: relative; overflow: hidden; padding: 0;">
+                <img src="https://kais.co.za/wp-content/uploads/2026/02/Best-pizza-in-Bloemfontein.png" alt="Best pizza in Bloemfontein at Kai's Grill House" class="slide active">
+                <img src="1.png" alt="Kai's Grill House Dish 1" class="slide">
+                <img src="2.png" alt="Kai's Grill House Dish 2" class="slide">
+                <img src="3.png" alt="Kai's Grill House Dish 3" class="slide">
+            </div>
         </div>
 
         <!-- Second Hero Section -->
@@ -101,9 +108,10 @@
         </div>
     </footer>
 
-    <!-- Script to handle staggered scroll reveal animations -->
+    <!-- Script to handle scroll reveal animations and photo slideshow -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            // Scroll Reveal Animation Observer
             const revealItems = document.querySelectorAll(".reveal-item");
 
             const observer = new IntersectionObserver((entries, observer) => {
@@ -120,6 +128,17 @@
             revealItems.forEach(item => {
                 observer.observe(item);
             });
+
+            // Hero Slideshow Timer
+            const slides = document.querySelectorAll(".hero-slideshow .slide");
+            if (slides.length > 0) {
+                let currentSlide = 0;
+                setInterval(() => {
+                    slides[currentSlide].classList.remove("active");
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].classList.add("active");
+                }, 4000); // Changes image every 4 seconds
+            }
         });
     </script>
 </body>
