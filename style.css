@@ -1,3 +1,9 @@
+/* Import Bernard MT Condensed (Fallback to generic sans-serif if not locally installed) */
+@font-face {
+    font-family: 'Bernard MT Condensed';
+    src: local('Bernard MT Condensed'), local('BernardMT-Condensed');
+}
+
 /* General Reset & Styles */
 * {
     margin: 0;
@@ -18,35 +24,43 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    border-bottom: 2px solid #eaeaea;
+    padding: 20px 40px;
+    border-bottom: 1px solid #eaeaea;
 }
 
 .header-left {
     display: flex;
     align-items: center;
-    gap: 20px;
 }
 
 .logo {
-    height: 70px;
+    max-height: 80px;
     width: auto;
+    object-fit: contain;
 }
 
-.header-titles h1 {
-    color: #fddb3b;
-    font-size: 28px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+.header-center {
+    text-align: center;
+    flex-grow: 1;
+    padding: 0 20px;
 }
 
-.header-titles .tagline {
+.header-center h1 {
+    font-family: 'Bernard MT Condensed', Impact, sans-serif;
     color: #fddb3b;
-    font-size: 14px;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+.header-center .tagline {
+    color: #fddb3b;
+    font-size: 15px;
     font-weight: bold;
+    margin-top: 2px;
 }
 
 .header-right .phone-number {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #333;
     text-decoration: none;
@@ -56,30 +70,31 @@ body {
     color: #fddb3b;
 }
 
-/* Navigation Tabs */
-.nav-tabs {
-    background-color: #222;
+/* Text Navigation Links (Replacing action bar) */
+.nav-links-container {
+    background-color: #ffffff;
+    padding: 10px 0 20px 0;
+    border-bottom: 2px solid #eaeaea;
 }
 
-.nav-tabs ul {
+.nav-links {
     list-style: none;
     display: flex;
     justify-content: center;
+    gap: 30px;
 }
 
-.nav-tabs li a {
-    display: block;
-    color: #fff;
-    padding: 12px 25px;
+.nav-links li a {
+    color: #333;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s;
+    font-size: 16px;
+    transition: color 0.3s;
 }
 
-.nav-tabs li a:hover, 
-.nav-tabs li a.active {
-    background-color: #fddb3b;
-    color: #000;
+.nav-links li a:hover, 
+.nav-links li a.active {
+    color: #fddb3b;
 }
 
 /* Main Home Content */
@@ -171,12 +186,6 @@ body {
     margin-bottom: 10px;
 }
 
-.location-info .coords {
-    font-size: 13px;
-    color: #666;
-    margin-top: 10px;
-}
-
 .location-map {
     flex: 1;
 }
@@ -196,40 +205,58 @@ body {
 }
 
 .site-footer p {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-size: 16px;
 }
 
-.social-links {
+/* Social Bubble Icons Styles */
+.social-bubbles {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
 }
 
-.social-links a {
-    color: #fddb3b;
+.social-bubble {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 20px;
     text-decoration: none;
-    font-weight: bold;
+    transition: transform 0.2s, opacity 0.2s;
 }
 
-.social-links a:hover {
-    text-decoration: underline;
+.social-bubble:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
 }
 
-/* Responsive design adjustments for mobile screens */
+.social-bubble.facebook {
+    background-color: #1877f2;
+}
+
+.social-bubble.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #df497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+/* Responsive Design Adjustments */
 @media (max-width: 768px) {
-    .site-header, .info-row, .info-row.reverse, .location-section {
+    .site-header {
         flex-direction: column;
+        gap: 20px;
         text-align: center;
     }
     
-    .header-left {
-        flex-direction: column;
-        gap: 10px;
+    .header-center {
+        padding: 0;
     }
 
-    .header-right {
-        margin-top: 15px;
+    .info-row, .info-row.reverse, .location-section {
+        flex-direction: column;
+        text-align: center;
     }
 
     .info-row {
