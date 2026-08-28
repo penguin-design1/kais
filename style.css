@@ -291,3 +291,36 @@ body {
 
 .social-bubble.facebook { background-color: #1877f2; }
 .social-bubble.instagram { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
+
+/* --- RESPONSIVE MOBILE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+    /* Stack hero elements vertically */
+    .hero-grid {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    /* Make images full width and order them first (above text) */
+    .hero-img, .hero-slideshow {
+        width: 100%;
+        height: 250px;
+        order: -1; 
+    }
+    
+    .hero-text {
+        width: 100%;
+    }
+
+    /* Stack info boxes vertically and put trading hours (hours-box) above location */
+    .info-grid {
+        flex-direction: column;
+    }
+
+    .hours-box {
+        order: 1; /* Appears first on mobile */
+    }
+
+    .location-box {
+        order: 2; /* Appears second on mobile */
+    }
+}
