@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Kai's Grill House</title>
+    <title>Kai's Grill House</title>
     <link rel="icon" type="image/png" href="kaihead.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Combined Sticky Header Wrapper -->
-    <div class="sticky-header-wrapper">
-        <header class="site-header">
-            <div class="header-left-spacer"></div>
-            <div class="header-center-logo">
-                <a href="home.html">
-                    <img src="kailogo.png" alt="Kai's Grill House Logo" class="logo">
-                </a>
-            </div>
-            <div class="header-right">
-                <a href="tel:+27511010800" class="phone-number">+27 51 101 0800</a>
-            </div>
-        </header>
+    <!-- Normal Header (Scrolls Away) -->
+    <header class="site-header">
+        <div class="header-left-spacer"></div>
+        <div class="header-center-logo">
+            <a href="home.html">
+                <img src="kailogo.png" alt="Kai's Grill House Logo" class="logo">
+            </a>
+        </div>
+        <div class="header-right">
+            <a href="tel:+27511010800" class="phone-number">+27 51 101 0800</a>
+        </div>
+    </header>
 
+    <!-- Sticky Main Navigation Bar Only -->
+    <div class="sticky-nav-wrapper">
         <nav class="nav-links-container">
             <ul class="nav-links">
                 <li><a href="home.html" class="active">Home</a></li>
@@ -36,27 +37,38 @@
     <!-- Main Content -->
     <main class="home-content">
         
-        <div class="dark-card" style="text-align: center; padding: 60px 20px;">
+        <!-- Welcome Card -->
+        <div class="dark-card" style="text-align: center;">
             <div class="section-tagline">Welcome To</div>
-            <h1 style="font-family: serif; font-size: 48px; color: #fddb3b; margin-bottom: 20px;">Kai's Grill House</h1>
-            <p style="font-size: 18px; color: #ccc; max-width: 700px; margin: 0 auto 30px auto;">
-                Flame-grilled perfection, rich flavours, and an unforgettable dining experience. Come taste our signature steaks, wood-fired pizzas, and gourmet burgers.
-            </p>
-            <a href="menu.html" style="background-color: #fddb3b; color: #1e1e1e; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 16px; display: inline-block;">View Our Menu</a>
+            <h1 style="font-family: serif; font-size: 42px; color: #fff; margin-bottom: 15px;">Kai's Grill House</h1>
+            <p style="color: #aaa; max-width: 800px; margin: 0 auto;">Experience premium cuts, flame-grilled perfection, wood-fired artisanal pizzas, and an inviting atmosphere right in the heart of town.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px;">
-            <div class="dark-card" style="margin-bottom: 0;">
-                <h3 style="color: #fddb3b; margin-bottom: 10px; font-size: 24px;">Flame Grilled Steaks</h3>
-                <p style="color: #aaa;">Aged cuts seasoned with Kai's signature house rub, grilled to your precise liking and finished with herb butter.</p>
+        <!-- Photo Gallery Section -->
+        <div class="dark-card">
+            <div class="section-tagline">Gallery</div>
+            <h2 style="font-family: serif; color: #fff; margin-bottom: 15px;">A Glimpse Inside</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="gallery1.jpg" alt="Grill dish"></div>
+                <div class="gallery-item"><img src="gallery2.jpg" alt="Restaurant interior"></div>
+                <div class="gallery-item"><img src="gallery3.jpg" alt="Wood fired pizza"></div>
+                <div class="gallery-item"><img src="gallery4.jpg" alt="Drinks and cocktails"></div>
             </div>
+        </div>
+
+        <!-- Info Grid (Hours, Address, & Google Map) -->
+        <div class="info-grid">
             <div class="dark-card" style="margin-bottom: 0;">
-                <h3 style="color: #fddb3b; margin-bottom: 10px; font-size: 24px;">Wood-Fired Pizzas</h3>
-                <p style="color: #aaa;">Hand-stretched dough baked in a wood-fired oven, topped with fresh artisanal ingredients and rich cheeses.</p>
+                <div class="section-tagline">Visit Us</div>
+                <h3 style="color: #fff; margin-bottom: 15px; font-family: serif;">Location & Hours</h3>
+                <p style="color: #ccc; margin-bottom: 10px;"><strong>Address:</strong><br>Shop 4, Preller Square, Dan Pienaar, Bloemfontein, South Africa</p>
+                <p style="color: #ccc; margin-bottom: 15px;"><strong>Opening Hours:</strong><br>Monday – Sunday: 11:00 AM – 10:00 PM</p>
+                <a href="https://maps.google.com" target="_blank" style="color: #fddb3b; font-weight: bold; text-decoration: none;"><i class="fas fa-map-marker-alt"></i> Open in Google Maps</a>
             </div>
-            <div class="dark-card" style="margin-bottom: 0;">
-                <h3 style="color: #fddb3b; margin-bottom: 10px; font-size: 24px;">Signature Drinks</h3>
-                <p style="color: #aaa;">From craft old fashioneds to refreshing mocktails, find the perfect pairing for your meal.</p>
+
+            <div class="dark-card map-container" style="margin-bottom: 0; padding: 20px;">
+                <!-- Embedded Google Map -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3484.35!2d26.2044!3d-29.1182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDA3JzA1LjUiUyAyNsKwMTInMTUuOCJF!5e0!3m2!1sen!2sza!4v1620000000000!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
 
