@@ -7,10 +7,49 @@
     <link rel="icon" type="image/png" href="kaihead.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional styling for clean menu categories */
+        .menu-category {
+            margin-bottom: 40px;
+        }
+        .menu-category h3 {
+            font-family: serif;
+            font-size: 26px;
+            color: #fddb3b;
+            border-bottom: 1px solid #333;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #333;
+            padding-bottom: 15px;
+        }
+        .menu-item-info {
+            max-width: 80%;
+        }
+        .menu-item-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        .menu-item-desc {
+            font-size: 14px;
+            color: #aaa;
+        }
+        .menu-item-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fddb3b;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Normal Header (Scrolls Away) -->
+    <!-- Header (Logo & Phone) -->
     <header class="site-header">
         <div class="header-left-spacer"></div>
         <div class="header-center-logo">
@@ -23,289 +62,73 @@
         </div>
     </header>
 
-    <!-- Sticky Navigation Wrapper (Navigation + Menu Category Buttons) -->
-    <div class="sticky-nav-wrapper">
-        <nav class="nav-links-container">
-            <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="menu.html" class="active">Menu</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-            </ul>
-        </nav>
-
-        <!-- Menu Navigation Bar -->
-        <div class="menu-subnav-container">
-            <ul class="menu-subnav">
-                <li><a href="#appetisers">Appetisers</a></li>
-                <li><a href="#grills">Grills</a></li>
-                <li><a href="#favourites">House Favourites</a></li>
-                <li><a href="#burgers">Burgers</a></li>
-                <li><a href="#ribs">Ribs & Wings</a></li>
-                <li><a href="#pizzas">Pizzas</a></li>
-                <li><a href="#desserts">Sweet Treats</a></li>
-                <li><a href="#drinks">Drinks & Cocktails</a></li>
-            </ul>
-        </div>
+    <!-- Sticky Navigation Bar -->
+    <div class="sticky-nav">
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="menu.html" class="active">Menu</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+        </ul>
     </div>
 
     <!-- Main Content -->
     <main class="home-content">
         
         <div class="dark-card">
-            <div style="text-align: center; margin-bottom: 20px;">
-                <div class="section-tagline">Our Offerings</div>
-                <h2 style="font-family: serif; font-size: 42px; color: #fff;">Full Menu</h2>
-                <p>Flame-grilled, full of character. Explore our complete food and drink selection below.</p>
+            <div style="text-align: center; margin-bottom: 40px;">
+                <div class="section-tagline">OUR SELECTION</div>
+                <h2 style="font-family: serif; font-size: 38px; color: #fff;">The Menu</h2>
+                <p style="color: #aaa; font-size: 15px;">Flame-grilled steaks, gourmet woodfired pizzas, and exceptional cuts.</p>
             </div>
 
-            <!-- Appetisers & Light Meals -->
-            <h3 id="appetisers" class="menu-category-title">Appetisers & Light Meals</h3>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Bacon Jalapeño Poppers</div>
-                    <div class="menu-item-desc">Whole jalapeños filled with cream cheese, bacon, peppadews, feta and cheddar, oven grilled.</div>
+            <!-- Category 1: Grill & Mains -->
+            <div class="menu-category">
+                <h3>Grills & Mains</h3>
+                
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <div class="menu-item-title">Kai's Signature Rump</div>
+                        <div class="menu-item-desc">300g flame-grilled prime cut, basted in our secret herb butter.</div>
+                    </div>
+                    <div class="menu-item-price">R245</div>
                 </div>
-                <div class="menu-item-price">R 68</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Garlic Herb Croquettes</div>
-                    <div class="menu-item-desc">Crisp golden cheese croquettes with garlic purée, fresh herbs and lemon zest, with house BBQ mayo.</div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <div class="menu-item-title">Dry-Aged Ribeye</div>
+                        <div class="menu-item-desc">350g rich marbling, seasoned coarse salt and black pepper over open coals.</div>
+                    </div>
+                    <div class="menu-item-price">R295</div>
                 </div>
-                <div class="menu-item-price">R 75</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Peri-Peri Chicken Livers</div>
-                    <div class="menu-item-desc">Chicken livers in a rich peri-peri cream sauce, served with toasted sourdough bread.</div>
+
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <div class="menu-item-title">Smoky BBQ Pork Ribs</div>
+                        <div class="menu-item-desc">Slow-cooked tender pork ribs drenched in sticky homemade basting.</div>
+                    </div>
+                    <div class="menu-item-price">R270</div>
                 </div>
-                <div class="menu-item-price">R 79</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Traditional Samoosas</div>
-                    <div class="menu-item-desc">Three golden fried samoosas (Biltong & Cheese, Corn & Cheese, or Beef Mince).</div>
-                </div>
-                <div class="menu-item-price">R 65</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Creamy Garlic & Lemon Mussels</div>
-                    <div class="menu-item-desc">Half-shell mussels in a lemon cream, garlic butter and white wine sauce, with toasted sourdough.</div>
-                </div>
-                <div class="menu-item-price">R 120</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Nachos</div>
-                    <div class="menu-item-desc">Crisp corn chips layered with tomato base and melted mix cheese, finished with guacamole and spring onion.</div>
-                </div>
-                <div class="menu-item-price">R 180</div>
             </div>
 
-            <!-- From The Grill -->
-            <h3 id="grills" class="menu-category-title">From The Grill</h3>
-            <p style="color: #aaa; margin-bottom: 15px;">Seasoned with Kai's house rub, grilled to temperature and finished with herb butter.</p>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">T-Bone (700g)</div>
-                    <div class="menu-item-desc">A generous cut for serious steak lovers.</div>
+            <!-- Category 2: Woodfired Pizzas -->
+            <div class="menu-category">
+                <h3>Woodfired Pizzas</h3>
+                
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <div class="menu-item-title">The Firehouse Special</div>
+                        <div class="menu-item-desc">Fior di latte, spicy salami, roasted chili, and fresh basil.</div>
+                    </div>
+                    <div class="menu-item-price">R185</div>
                 </div>
-                <div class="menu-item-price">R 380</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Ribeye (450g)</div>
-                    <div class="menu-item-desc">Bone-in ribeye, rich and juicy with bold grilled flavour.</div>
-                </div>
-                <div class="menu-item-price">R 240</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Rump (350g)</div>
-                    <div class="menu-item-desc">Thick-cut rump, full-flavoured and grilled over high heat.</div>
-                </div>
-                <div class="menu-item-price">R 215</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Sirloin (250g)</div>
-                    <div class="menu-item-desc">Classic sirloin, grilled with a balance of tenderness and flavour.</div>
-                </div>
-                <div class="menu-item-price">R 169</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Fillet (200g)</div>
-                    <div class="menu-item-desc">Tender fillet, lean and soft with a clean beef finish.</div>
-                </div>
-                <div class="menu-item-price">R 158</div>
-            </div>
 
-            <!-- House Favourites -->
-            <h3 id="favourites" class="menu-category-title">House Favourites</h3>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Overnight Braised Lamb Shank (400g)</div>
-                    <div class="menu-item-desc">Slow-braised lamb shank with rosemary, thyme and red wine jus, served over smooth garlic mash.</div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <div class="menu-item-title">Classic Margherita</div>
+                        <div class="menu-item-desc">Rich tomato base, melted mozzarella, and fresh herbs.</div>
+                    </div>
+                    <div class="menu-item-price">R135</div>
                 </div>
-                <div class="menu-item-price">R 350</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Braised Sticky Short Rib (400g)</div>
-                    <div class="menu-item-desc">Fall-apart tender short rib in a sticky Asian-style glaze with soy, ginger and garlic notes.</div>
-                </div>
-                <div class="menu-item-price">R 280</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Seafood Tagliatelle</div>
-                    <div class="menu-item-desc">Mussels, prawns and squid tossed through tagliatelle in a rich tomato, garlic and oregano sauce.</div>
-                </div>
-                <div class="menu-item-price">R 239</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Crispy Pork Belly</div>
-                    <div class="menu-item-desc">Slow-cooked pork belly with crisp crackling, garlic mash, kimchi and roasted sesame dressing.</div>
-                </div>
-                <div class="menu-item-price">R 230</div>
-            </div>
-
-            <!-- Burgers -->
-            <h3 id="burgers" class="menu-category-title">Burgers</h3>
-            <p style="color: #aaa; margin-bottom: 15px;">Served with a side of your choosing.</p>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Kai's Beef Burger</div>
-                    <div class="menu-item-desc">House-made beef patty with lettuce, tomato, pickled red onion and BBQ mayo on a toasted brioche bun.</div>
-                </div>
-                <div class="menu-item-price">R 140</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Pulled Pork Burger</div>
-                    <div class="menu-item-desc">Pulled pork tossed in Am-Asian basting, stacked with crunchy slaw and coriander jalapeño mayo.</div>
-                </div>
-                <div class="menu-item-price">R 135</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Grilled Chicken Burger</div>
-                    <div class="menu-item-desc">Grilled chicken breast with lettuce, tomato, pickled red onion and BBQ mayo on brioche.</div>
-                </div>
-                <div class="menu-item-price">R 158</div>
-            </div>
-
-            <!-- Ribs, Wings & More -->
-            <h3 id="ribs" class="menu-category-title">Ribs, Wings & More</h3>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Sticky Ribs (250g / 500g / 750g)</div>
-                    <div class="menu-item-desc">Ribs glazed with an Asian basting.</div>
-                </div>
-                <div class="menu-item-price">R 169 / R 295 / R 365</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Crispy Wings (300g / 600g / 900g)</div>
-                    <div class="menu-item-desc">Crispy fried wings with your choice of creamy blue cheese or spicy peri-peri.</div>
-                </div>
-                <div class="menu-item-price">R 125 / R 199 / R 260</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Lemon and Garlic Prawns (4pc / 8pc / 12pc)</div>
-                    <div class="menu-item-desc">Large Queen Prawns pan-fried in our creamy Lemon & Garlic Butter Sauce.</div>
-                </div>
-                <div class="menu-item-price">R 169 / R 299 / R 390</div>
-            </div>
-
-            <!-- Wood Fired Artisanal Pizzas -->
-            <h3 id="pizzas" class="menu-category-title">Wood Fired Artisanal Pizzas</h3>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">The Argentinian</div>
-                    <div class="menu-item-desc">Mozzarella, sirloin, blue cheese, rocket, pickled red onion and chimichurri.</div>
-                </div>
-                <div class="menu-item-price">R 210</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">The Smokehouse</div>
-                    <div class="menu-item-desc">Pulled pork, feta, peppadews, avocado and fresh coriander.</div>
-                </div>
-                <div class="menu-item-price">R 225</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Kai's Biltong Pizza</div>
-                    <div class="menu-item-desc">Chili-infused garlic biltong, peppadews, feta and fresh rocket topped with mozzarella.</div>
-                </div>
-                <div class="menu-item-price">R 180</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Margherita Pizza</div>
-                    <div class="menu-item-desc">Tomato base, mozzarella, olive oil and oregano.</div>
-                </div>
-                <div class="menu-item-price">R 105</div>
-            </div>
-
-            <!-- Sweet Treats -->
-            <h3 id="desserts" class="menu-category-title">Sweet Treats</h3>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Caramel Chocolate Pecan Nut Cheesecake</div>
-                    <div class="menu-item-desc">Creamy caramel and chocolate cheesecake with a roasted pecan biscuit base.</div>
-                </div>
-                <div class="menu-item-price">R 80</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Malva Pudding</div>
-                    <div class="menu-item-desc">Classic warm malva pudding soaked with caramel sauce and served with vanilla ice cream.</div>
-                </div>
-                <div class="menu-item-price">R 45</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Swedish Chocolate Cake</div>
-                    <div class="menu-item-desc">Dense, fudgy chocolate cake served warm with glossy ganache and vanilla ice cream.</div>
-                </div>
-                <div class="menu-item-price">R 35</div>
-            </div>
-
-            <!-- Drinks & Cocktails -->
-            <h3 id="drinks" class="menu-category-title">Drinks & Cocktails</h3>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Woodford Reserve Old Fashioned</div>
-                    <div class="menu-item-desc">Robust bourbon whiskey with sweet citrus and a dash of aromatic bitters.</div>
-                </div>
-                <div class="menu-item-price">R 110</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Classic Margarita</div>
-                    <div class="menu-item-desc">Premium El Jimador Blanco tequila, fresh lime, simple syrup, and a splash of triple sec.</div>
-                </div>
-                <div class="menu-item-price">R 85</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Pina Colada (0% Alcohol Mocktail)</div>
-                    <div class="menu-item-desc">Creamy tropical blend of coconut cream, ice cream & pineapple.</div>
-                </div>
-                <div class="menu-item-price">R 65</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Coke / Sprite / Fanta (300ml Can)</div>
-                    <div class="menu-item-desc">Cold carbonated soft drinks.</div>
-                </div>
-                <div class="menu-item-price">R 33</div>
             </div>
 
         </div>
