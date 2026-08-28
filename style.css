@@ -1,4 +1,4 @@
-/* Import Bernard MT Condensed (Fallback to generic sans-serif if not locally installed) */
+/* Import Bernard MT Condensed */
 @font-face {
     font-family: 'Bernard MT Condensed';
     src: local('Bernard MT Condensed'), local('BernardMT-Condensed');
@@ -13,19 +13,19 @@
 }
 
 body {
-    background-color: #e0ecea;
+    background-color: #fcf8f2; /* Cream background for main body */
     color: #333;
     line-height: 1.6;
 }
 
-/* Header */
+/* Header (#2a2a2a background) */
 .site-header {
-    background-color: #e0ecea;
+    background-color: #2a2a2a;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 2px solid #3a3a3a;
 }
 
 .header-left {
@@ -48,8 +48,11 @@ body {
 .header-center h1 {
     font-family: 'Bernard MT Condensed', Impact, sans-serif;
     color: #fddb3b;
-    font-size: 36px;
+    font-size: 38px;
     letter-spacing: 1px;
+    /* Black text outline */
+    -webkit-text-stroke: 1px #000000;
+    text-shadow: 2px 2px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
 }
 
 .header-center .tagline {
@@ -57,24 +60,25 @@ body {
     font-size: 15px;
     font-weight: bold;
     margin-top: 2px;
+    -webkit-text-stroke: 0.4px #000000;
 }
 
 .header-right .phone-number {
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: #fddb3b; /* Changed to yellow */
     text-decoration: none;
 }
 
 .header-right .phone-number:hover {
-    color: #fddb3b;
+    opacity: 0.8;
 }
 
-/* Text Navigation Links (Replacing action bar) */
+/* Text Navigation Links */
 .nav-links-container {
-    background-color: #ffffff;
-    padding: 10px 0 20px 0;
-    border-bottom: 2px solid #eaeaea;
+    background-color: #2a2a2a;
+    padding: 0 0 15px 0;
+    border-bottom: 2px solid #3a3a3a;
 }
 
 .nav-links {
@@ -85,7 +89,7 @@ body {
 }
 
 .nav-links li a {
-    color: #333;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
@@ -110,7 +114,7 @@ body {
     align-items: center;
     gap: 40px;
     margin-bottom: 50px;
-    background: #fff;
+    background: #ffffff;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -138,7 +142,7 @@ body {
 
 /* Opening Hours Section */
 .hours-section {
-    background: #fff;
+    background: #ffffff;
     padding: 40px;
     border-radius: 8px;
     margin-bottom: 50px;
@@ -167,7 +171,7 @@ body {
 /* Location Section */
 .location-section {
     display: flex;
-    background: #fff;
+    background: #ffffff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -190,9 +194,9 @@ body {
     flex: 1;
 }
 
-/* Footer */
+/* Footer (#2a2a2a background) */
 .site-footer {
-    background-color: #222;
+    background-color: #2a2a2a;
     color: #fff;
     text-align: center;
     padding: 40px 20px;
@@ -209,7 +213,7 @@ body {
     font-size: 16px;
 }
 
-/* Social Bubble Icons Styles */
+/* Social Bubble Icons Styles with Purple Instagram Gradient */
 .social-bubbles {
     display: flex;
     justify-content: center;
@@ -239,7 +243,7 @@ body {
 }
 
 .social-bubble.instagram {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #df497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
 /* Responsive Design Adjustments */
