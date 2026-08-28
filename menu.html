@@ -10,20 +10,21 @@
 </head>
 <body>
 
-    <!-- Sticky Header & Nav Wrapper -->
-    <div class="sticky-header-wrapper">
-        <header class="site-header">
-            <div class="header-left-spacer"></div>
-            <div class="header-center-logo">
-                <a href="home.html">
-                    <img src="kailogo.png" alt="Kai's Grill House Logo" class="logo">
-                </a>
-            </div>
-            <div class="header-right">
-                <a href="tel:+27511010800" class="phone-number">+27 51 101 0800</a>
-            </div>
-        </header>
+    <!-- Standard Header (Scrolls Away) -->
+    <header class="site-header">
+        <div class="header-left-spacer"></div>
+        <div class="header-center-logo">
+            <a href="home.html">
+                <img src="kailogo.png" alt="Kai's Grill House Logo" class="logo">
+            </a>
+        </div>
+        <div class="header-right">
+            <a href="tel:+27511010800" class="phone-number">+27 51 101 0800</a>
+        </div>
+    </header>
 
+    <!-- Sticky Navigation Wrapper (Stays fixed at top) -->
+    <div class="sticky-nav-wrapper">
         <nav class="nav-links-container">
             <ul class="nav-links">
                 <li><a href="home.html">Home</a></li>
@@ -31,12 +32,26 @@
                 <li><a href="reviews.html">Reviews</a></li>
             </ul>
         </nav>
+
+        <!-- Menu Navigation Bar -->
+        <div class="menu-subnav-container">
+            <ul class="menu-subnav">
+                <li><a href="#appetisers">Appetisers</a></li>
+                <li><a href="#grills">Grills</a></li>
+                <li><a href="#favourites">House Favourites</a></li>
+                <li><a href="#burgers">Burgers</a></li>
+                <li><a href="#ribs">Ribs & Wings</a></li>
+                <li><a href="#pizzas">Pizzas</a></li>
+                <li><a href="#desserts">Sweet Treats</a></li>
+                <li><a href="#drinks">Drinks & Cocktails</a></li>
+            </ul>
+        </div>
     </div>
 
     <!-- Main Content -->
     <main class="home-content">
         
-        <div class="dark-card" style="padding: 40px;">
+        <div class="dark-card">
             <div style="text-align: center; margin-bottom: 20px;">
                 <div class="section-tagline">Our Offerings</div>
                 <h2 style="font-family: serif; font-size: 42px; color: #fff;">Full Menu</h2>
@@ -44,7 +59,7 @@
             </div>
 
             <!-- Appetisers & Light Meals -->
-            <h3 class="menu-category-title">Appetisers & Light Meals</h3>
+            <h3 id="appetisers" class="menu-category-title">Appetisers & Light Meals</h3>
             <div class="menu-item-row">
                 <div class="menu-item-info">
                     <div class="menu-item-name">Bacon Jalapeño Poppers</div>
@@ -89,8 +104,8 @@
             </div>
 
             <!-- From The Grill -->
-            <h3 class="menu-category-title">From The Grill</h3>
-            <p style="color: #aaa; margin-bottom: 15px;">Seasoned with Kai's house rub, grilled to temperature and finished with herb butter. Served on their own[cite: 1].</p>
+            <h3 id="grills" class="menu-category-title">From The Grill</h3>
+            <p style="color: #aaa; margin-bottom: 15px;">Seasoned with Kai's house rub, grilled to temperature and finished with herb butter[cite: 1].</p>
             <div class="menu-item-row">
                 <div class="menu-item-info">
                     <div class="menu-item-name">T-Bone (700g)</div>
@@ -128,7 +143,7 @@
             </div>
 
             <!-- House Favourites -->
-            <h3 class="menu-category-title">House Favourites</h3>
+            <h3 id="favourites" class="menu-category-title">House Favourites</h3>
             <div class="menu-item-row">
                 <div class="menu-item-info">
                     <div class="menu-item-name">Overnight Braised Lamb Shank (400g)</div>
@@ -159,8 +174,8 @@
             </div>
 
             <!-- Burgers -->
-            <h3 class="menu-category-title">Burgers</h3>
-            <p style="color: #aaa; margin-bottom: 15px;">Served with a side of your choosing (Sweet potato fries, rustic-cut fries, or side salad)[cite: 1].</p>
+            <h3 id="burgers" class="menu-category-title">Burgers</h3>
+            <p style="color: #aaa; margin-bottom: 15px;">Served with a side of your choosing[cite: 1].</p>
             <div class="menu-item-row">
                 <div class="menu-item-info">
                     <div class="menu-item-name">Kai's Beef Burger</div>
@@ -171,21 +186,20 @@
             <div class="menu-item-row">
                 <div class="menu-item-info">
                     <div class="menu-item-name">Pulled Pork Burger</div>
-                    <div class="menu-item-desc">Pulled pork tossed in Am-Asian basting, stacked with crunchy slaw and coriander jalapeño mayo on brioche[cite: 1].</div>
+                    <div class="menu-item-desc">Pulled pork tossed in Am-Asian basting, stacked with crunchy slaw and coriander jalapeño mayo[cite: 1].</div>
                 </div>
                 <div class="menu-item-price">R 135[cite: 1]</div>
             </div>
             <div class="menu-item-row">
                 <div class="menu-item-info">
                     <div class="menu-item-name">Grilled Chicken Burger</div>
-                    <div class="menu-item-desc">Grilled chicken breast with lettuce, tomato, pickled red onion and BBQ mayo on a toasted brioche bun[cite: 1].</div>
+                    <div class="menu-item-desc">Grilled chicken breast with lettuce, tomato, pickled red onion and BBQ mayo on brioche[cite: 1].</div>
                 </div>
                 <div class="menu-item-price">R 158[cite: 1]</div>
             </div>
 
             <!-- Ribs, Wings & More -->
-            <h3 class="menu-category-title">Ribs, Wings & More</h3>
-            <p style="color: #aaa; margin-bottom: 15px;">Served with a choice of rustic-cut fries, sweet potato fries, or side salad[cite: 1].</p>
+            <h3 id="ribs" class="menu-category-title">Ribs, Wings & More</h3>
             <div class="menu-item-row">
                 <div class="menu-item-info">
                     <div class="menu-item-name">Sticky Ribs (250g / 500g / 750g)</div>
@@ -207,16 +221,9 @@
                 </div>
                 <div class="menu-item-price">R 169 / R 299 / R 390[cite: 1]</div>
             </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Meaty Snack Platter (For 2 or 4)</div>
-                    <div class="menu-item-desc">Flame-grilled 250g sirloin, biltong, bone marrow, toasties, pickled red onion and fresh chimichurri[cite: 1].</div>
-                </div>
-                <div class="menu-item-price">From R 280[cite: 1]</div>
-            </div>
 
             <!-- Wood Fired Artisanal Pizzas -->
-            <h3 class="menu-category-title">Wood Fired Artisanal Pizzas</h3>
+            <h3 id="pizzas" class="menu-category-title">Wood Fired Artisanal Pizzas</h3>
             <div class="menu-item-row">
                 <div class="menu-item-info">
                     <div class="menu-item-name">The Argentinian</div>
@@ -233,29 +240,8 @@
             </div>
             <div class="menu-item-row">
                 <div class="menu-item-info">
-                    <div class="menu-item-name">Smoke Salmon Bianca</div>
-                    <div class="menu-item-desc">Lemon cream cheese base, smoked salmon, fresh rocket, parmesan, capers and lemon[cite: 1].</div>
-                </div>
-                <div class="menu-item-price">R 198[cite: 1]</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
                     <div class="menu-item-name">Kai's Biltong Pizza</div>
                     <div class="menu-item-desc">Chili-infused garlic biltong, peppadews, feta and fresh rocket topped with mozzarella[cite: 1].</div>
-                </div>
-                <div class="menu-item-price">R 180[cite: 1]</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Californian</div>
-                    <div class="menu-item-desc">Mozzarella, bacon, avo & feta[cite: 1].</div>
-                </div>
-                <div class="menu-item-price">R 160[cite: 1]</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">All In</div>
-                    <div class="menu-item-desc">Mozzarella, cheddar, mince, chicken, bacon, peppers, mushrooms, feta and jalapeños[cite: 1].</div>
                 </div>
                 <div class="menu-item-price">R 180[cite: 1]</div>
             </div>
@@ -268,7 +254,7 @@
             </div>
 
             <!-- Sweet Treats -->
-            <h3 class="menu-category-title">Sweet Treats</h3>
+            <h3 id="desserts" class="menu-category-title">Sweet Treats</h3>
             <div class="menu-item-row">
                 <div class="menu-item-info">
                     <div class="menu-item-name">Caramel Chocolate Pecan Nut Cheesecake</div>
@@ -285,34 +271,20 @@
             </div>
             <div class="menu-item-row">
                 <div class="menu-item-info">
-                    <div class="menu-item-name">Rooibos Cinnamon Apple Crumble</div>
-                    <div class="menu-item-desc">Warm rooibos-spiced apple filling topped with buttery crumble and vanilla ice cream[cite: 1].</div>
-                </div>
-                <div class="menu-item-price">R 40[cite: 1]</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
                     <div class="menu-item-name">Swedish Chocolate Cake</div>
                     <div class="menu-item-desc">Dense, fudgy chocolate cake served warm with glossy ganache and vanilla ice cream[cite: 1].</div>
                 </div>
                 <div class="menu-item-price">R 35[cite: 1]</div>
             </div>
 
-            <!-- Cocktails -->
-            <h3 class="menu-category-title">Cocktails & Margaritas</h3>
+            <!-- Drinks & Cocktails -->
+            <h3 id="drinks" class="menu-category-title">Drinks & Cocktails</h3>
             <div class="menu-item-row">
                 <div class="menu-item-info">
                     <div class="menu-item-name">Woodford Reserve Old Fashioned</div>
                     <div class="menu-item-desc">Robust bourbon whiskey with sweet citrus and a dash of aromatic bitters[cite: 1].</div>
                 </div>
                 <div class="menu-item-price">R 110[cite: 1]</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Monkey Shoulder Whiskey Sours</div>
-                    <div class="menu-item-desc">Vanilla, honey and zesty citrus into a velvety rich spicy blend[cite: 1].</div>
-                </div>
-                <div class="menu-item-price">R 98[cite: 1]</div>
             </div>
             <div class="menu-item-row">
                 <div class="menu-item-info">
@@ -323,65 +295,17 @@
             </div>
             <div class="menu-item-row">
                 <div class="menu-item-info">
-                    <div class="menu-item-name">Cosmopolitan / The Penumbra / Peach Passion</div>
-                    <div class="menu-item-desc">Classic blends of vodka, botanical gins, or schnapps with fresh citrus[cite: 1].</div>
-                </div>
-                <div class="menu-item-price">From R 70[cite: 1]</div>
-            </div>
-
-            <!-- Mocktails & Cold Drinks -->
-            <h3 class="menu-category-title">Mocktails & Cold Drinks</h3>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Pina Colada (0% Alcohol)</div>
+                    <div class="menu-item-name">Pina Colada (0% Alcohol Mocktail)</div>
                     <div class="menu-item-desc">Creamy tropical blend of coconut cream, ice cream & pineapple[cite: 1].</div>
                 </div>
                 <div class="menu-item-price">R 65[cite: 1]</div>
             </div>
             <div class="menu-item-row">
                 <div class="menu-item-info">
-                    <div class="menu-item-name">Peach Mojito / Kiwi Watermelon</div>
-                    <div class="menu-item-desc">Refreshing fruit syrups mixed with fresh lime juice, mint and sprite[cite: 1].</div>
-                </div>
-                <div class="menu-item-price">R 48[cite: 1]</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Sodas & Cans (Coke, Sprite, Fanta, etc.)</div>
-                    <div class="menu-item-desc">300ml cans[cite: 1].</div>
+                    <div class="menu-item-name">Coke / Sprite / Fanta (300ml Can)</div>
+                    <div class="menu-item-desc">Cold carbonated soft drinks[cite: 1].</div>
                 </div>
                 <div class="menu-item-price">R 33[cite: 1]</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Appetiser / Grapetiser</div>
-                    <div class="menu-item-desc">Sparkling fruit juice[cite: 1].</div>
-                </div>
-                <div class="menu-item-price">R 32[cite: 1]</div>
-            </div>
-
-            <!-- Hot Drinks -->
-            <h3 class="menu-category-title">Hot Drinks</h3>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Cappuccino / Caffè Latte</div>
-                    <div class="menu-item-desc">Freshly brewed coffee with textured milk[cite: 1].</div>
-                </div>
-                <div class="menu-item-price">R 38[cite: 1]</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Americano / Single Espresso</div>
-                    <div class="menu-item-desc">Classic coffee style[cite: 1].</div>
-                </div>
-                <div class="menu-item-price">R 28[cite: 1]</div>
-            </div>
-            <div class="menu-item-row">
-                <div class="menu-item-info">
-                    <div class="menu-item-name">Hot Chocolate / Chai Latte</div>
-                    <div class="menu-item-desc">Rich warming treats[cite: 1].</div>
-                </div>
-                <div class="menu-item-price">R 48[cite: 1]</div>
             </div>
 
         </div>
