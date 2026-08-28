@@ -8,8 +8,43 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Sub-navigation header for menu categories */
+        .menu-sub-nav {
+            background-color: #161616;
+            border-bottom: 2px solid #2a2a2a;
+            padding: 10px 0;
+            text-align: center;
+            overflow-x: auto;
+            white-space: nowrap;
+            position: sticky;
+            top: 50px; /* Adjusts below the main sticky nav */
+            z-index: 999;
+        }
+
+        .menu-sub-links {
+            list-style: none;
+            display: inline-flex;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .menu-sub-links li a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+
+        .menu-sub-links li a:hover {
+            color: #fddb3b;
+        }
+
         .menu-category {
             margin-bottom: 40px;
+            scroll-margin-top: 120px; /* Ensures smooth jump offset under sticky headers */
         }
         .menu-category h3 {
             font-family: serif;
@@ -62,12 +97,26 @@
         </div>
     </header>
 
-    <!-- Sticky Navigation Bar -->
+    <!-- Main Sticky Navigation Bar -->
     <div class="sticky-nav">
         <ul class="nav-links">
             <li><a href="home.html">Home</a></li>
             <li><a href="menu.html" class="active">Menu</a></li>
             <li><a href="reviews.html">Reviews</a></li>
+        </ul>
+    </div>
+
+    <!-- Menu Section Inter-Navigation Sub-Header -->
+    <div class="menu-sub-nav">
+        <ul class="menu-sub-links">
+            <li><a href="#appetisers">Starters</a></li>
+            <li><a href="#salads">Salads</a></li>
+            <li><a href="#grills">Grills</a></li>
+            <li><a href="#house-favourites">Favourites</a></li>
+            <li><a href="#burgers">Burgers</a></li>
+            <li><a href="#ribs-wings">Ribs & Wings</a></li>
+            <li><a href="#pizzas">Pizzas</a></li>
+            <li><a href="#desserts">Desserts</a></li>
         </ul>
     </div>
 
@@ -82,7 +131,7 @@
             </div>
 
             <!-- Appetisers & Light Meals -->
-            <div class="menu-category">
+            <div id="appetisers" class="menu-category">
                 <div class="section-tagline">STARTERS</div>
                 <h3>Appetisers & Light Meals</h3>
                 <div class="menu-item">
@@ -137,7 +186,7 @@
             </div>
 
             <!-- Salads -->
-            <div class="menu-category">
+            <div id="salads" class="menu-category">
                 <div class="section-tagline">FRESH & CRISP</div>
                 <h3>Salads</h3>
                 <div class="menu-item">
@@ -157,7 +206,7 @@
             </div>
 
             <!-- From The Grill -->
-            <div class="menu-category">
+            <div id="grills" class="menu-category">
                 <div class="section-tagline">FLAME & FIRE</div>
                 <h3>From The Grill</h3>
                 <div class="menu-item">
@@ -198,7 +247,7 @@
             </div>
 
             <!-- House Favourites -->
-            <div class="menu-category">
+            <div id="house-favourites" class="menu-category">
                 <div class="section-tagline">SIGNATURE DISHES</div>
                 <h3>House Favourites</h3>
                 <div class="menu-item">
@@ -232,7 +281,7 @@
             </div>
 
             <!-- Burgers -->
-            <div class="menu-category">
+            <div id="burgers" class="menu-category">
                 <div class="section-tagline">HANDHELD</div>
                 <h3>Burgers</h3>
                 <div class="menu-item">
@@ -259,7 +308,7 @@
             </div>
 
             <!-- Ribs, Wings & More -->
-            <div class="menu-category">
+            <div id="ribs-wings" class="menu-category">
                 <div class="section-tagline">SHAREABLES</div>
                 <h3>Ribs, Wings & More</h3>
                 <div class="menu-item">
@@ -293,7 +342,7 @@
             </div>
 
             <!-- Wood Fired Artisanal Pizzas -->
-            <div class="menu-category">
+            <div id="pizzas" class="menu-category">
                 <div class="section-tagline">STONEBAKED</div>
                 <h3>Wood Fired Artisanal Pizzas</h3>
                 <div class="menu-item">
@@ -355,7 +404,7 @@
             </div>
 
             <!-- Sweet Treats -->
-            <div class="menu-category">
+            <div id="desserts" class="menu-category">
                 <div class="section-tagline">DESSERTS</div>
                 <h3>Sweet Treats</h3>
                 <div class="menu-item">
