@@ -10,6 +10,17 @@ body {
     background-color: #1e1e1e; /* Dark grey theme background */
     color: #f5f5f5;
     line-height: 1.6;
+    padding-top: 130px; /* Prevents content from hiding under the fixed header */
+}
+
+/* Fixed Sticky Header & Navigation Container */
+.sticky-header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
 /* Header with Centered Logo */
@@ -18,7 +29,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 15px 40px;
     border-bottom: 2px solid #2a2a2a;
 }
 
@@ -36,7 +47,7 @@ body {
 }
 
 .logo {
-    max-height: 90px;
+    max-height: 75px;
     width: auto;
     object-fit: contain;
 }
@@ -55,7 +66,7 @@ body {
 /* Navigation Links */
 .nav-links-container {
     background-color: #161616;
-    padding: 0 0 15px 0;
+    padding: 10px 0;
     border-bottom: 2px solid #2a2a2a;
 }
 
@@ -83,10 +94,10 @@ body {
 .home-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 30px 20px;
 }
 
-/* Section Header Taglines (Small yellow category text) */
+/* Section Header Taglines */
 .section-tagline {
     font-size: 13px;
     font-weight: bold;
@@ -96,7 +107,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* Split Content Rows (Matching Screenshot Style) */
+/* Split Content Rows */
 .info-row {
     display: flex;
     align-items: center;
@@ -121,7 +132,7 @@ body {
 
 .info-text h2 {
     font-size: 42px;
-    font-family: serif; /* Gives that elegant editorial look */
+    font-family: serif;
     margin-bottom: 20px;
     color: #fff;
     line-height: 1.2;
@@ -179,6 +190,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 .dark-card h3 {
@@ -211,6 +223,47 @@ body {
     margin-top: 20px;
     border-radius: 8px;
     overflow: hidden;
+}
+
+/* Menu Specific Table Styles */
+.menu-category-title {
+    font-size: 32px;
+    font-family: serif;
+    color: #fddb3b;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.menu-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 12px 0;
+    border-bottom: 1px dashed #333;
+}
+
+.menu-item-info {
+    max-width: 80%;
+}
+
+.menu-item-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.menu-item-desc {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 4px;
+}
+
+.menu-item-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fddb3b;
 }
 
 /* Footer Style */
