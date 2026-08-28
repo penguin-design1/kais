@@ -111,7 +111,8 @@ body {
     transition: color 0.2s;
 }
 
-.menu-sub-links li a:hover {
+.menu-sub-links li a:hover,
+.menu-sub-links li a.active {
     color: #fddb3b;
 }
 
