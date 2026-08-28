@@ -8,43 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Sub-navigation header for menu categories */
-        .menu-sub-nav {
-            background-color: #161616;
-            border-bottom: 2px solid #2a2a2a;
-            padding: 10px 0;
-            text-align: center;
-            overflow-x: auto;
-            white-space: nowrap;
-            position: sticky;
-            top: 50px; /* Adjusts below the main sticky nav */
-            z-index: 999;
-        }
-
-        .menu-sub-links {
-            list-style: none;
-            display: inline-flex;
-            gap: 20px;
-            padding: 0 20px;
-        }
-
-        .menu-sub-links li a {
-            color: #aaa;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.2s;
-        }
-
-        .menu-sub-links li a:hover {
-            color: #fddb3b;
-        }
-
         .menu-category {
             margin-bottom: 40px;
-            scroll-margin-top: 120px; /* Ensures smooth jump offset under sticky headers */
+            scroll-margin-top: 120px; /* Keeps headings from hiding under sticky headers */
         }
         .menu-category h3 {
             font-family: serif;
@@ -451,5 +417,34 @@
         </div>
     </footer>
 
+    <!-- Script to highlight active sub-nav link on scroll -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".menu-category");
+            const navLinks = document.querySelectorAll(".menu-sub-links a");
+
+            function highlightNavOnScroll() {
+                let scrollPosition = window.scrollY + 150; // Offset for sticky headers
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute("id");
+
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove("active");
+                            if (link.getAttribute("href") === "#" + sectionId) {
+                                link.classList.add("active");
+                            }
+                        });
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", highlightNavOnScroll);
+            highlightNavOnScroll(); // Run on load to set initial state
+        });
+    </script>
 </body>
 </html>
